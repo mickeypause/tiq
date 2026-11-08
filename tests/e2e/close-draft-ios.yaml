@@ -1,0 +1,451 @@
+# Requires example Linear sign-in; imports stock Simulator photos and submits no issues.
+{
+  "steps": [
+    {
+      "launch": "dev.rnqaoverlay.example"
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        },
+        "timeoutMs": 15000
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tap": {
+        "text": "Report bug"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        },
+        "timeoutMs": 15000
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "text": "Typing Predictions"
+        }
+      }
+    },
+    {
+      "tap": {
+        "id": "qa-overlay.close"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tap": {
+        "text": "Report bug"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "text": "Typing Predictions"
+        }
+      }
+    },
+    {
+      "tool": "keyboard",
+      "args": {
+        "text": "Draft alert check"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "text",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        },
+        "expectedText": "Draft alert check"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "echo": "Drag the unlabeled native sheet header downward. Point uses the Toolbar AX top edge (y=0.071) plus 0.01, not screenshot pixels. The grabber is intentionally hidden; verify the same populated composer remains."
+    },
+    {
+      "tool": "gesture-swipe",
+      "args": {
+        "fromX": 0.5,
+        "fromY": 0.081,
+        "toX": 0.5,
+        "toY": 0.45,
+        "durationMs": 500,
+        "momentum": false
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "text",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        },
+        "expectedText": "Draft alert check"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tap": {
+        "id": "qa-overlay.close"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "text": "Save this draft?"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tap": {
+        "text": "Save draft"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "text": "Save this draft?"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tap": {
+        "text": "Report bug"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "text",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        },
+        "expectedText": "Draft alert check"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "text": "Typing Predictions"
+        }
+      }
+    },
+    {
+      "tap": {
+        "id": "qa-overlay.close"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "text": "Save this draft?"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tap": {
+        "text": "Discard"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "text": "Save this draft?"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tap": {
+        "text": "Report bug"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "text",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        },
+        "expectedText": "Issue title Issue title",
+        "textMatch": "equals"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "tap": {
+        "id": "qa-overlay.close"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    }
+  ]
+}

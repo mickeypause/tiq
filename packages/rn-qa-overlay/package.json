@@ -1,0 +1,43 @@
+{
+  "name": "@mickeypause/tiq",
+  "version": "0.1.6",
+  "description": "Tiq: native in-app feedback and issue reporting for internal Expo builds. SwiftUI and Jetpack Compose; no JavaScript runtime import.",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "app.plugin.js",
+  "files": [
+    "app.plugin.js",
+    "build/*.js",
+    "build/*.d.ts",
+    "ios/**/*.swift",
+    "ios/LinearIcons.xcassets",
+    "android/build.gradle",
+    "android/src/main",
+    "expo-module.config.json",
+    "react-native.config.js",
+    "RnQaOverlay.podspec",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "build": "bun build plugin/index.ts --target=node --format=cjs --external expo --outfile=build/index.js && tsc -p tsconfig.build.json",
+    "prepack": "bun run build"
+  },
+  "peerDependencies": {
+    "expo": ">=58.0.0 <59.0.0",
+    "react-native": ">=0.88.0 <0.89.0"
+  },
+  "types": "build/index.d.ts",
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "expo",
+    "expo-config-plugin",
+    "react-native",
+    "qa",
+    "bug-reporting",
+    "linear"
+  ],
+  "private": true
+}

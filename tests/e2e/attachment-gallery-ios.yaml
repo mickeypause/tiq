@@ -1,0 +1,604 @@
+# Requires example Linear sign-in; imports stock Simulator photos and submits no issues.
+{
+  "steps": [
+    {
+      "launch": "dev.rnqaoverlay.example"
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        },
+        "timeoutMs": 15000
+      }
+    },
+    {
+      "tool": "gesture-swipe",
+      "args": {
+        "fromX": 0.91,
+        "fromY": 0.101,
+        "toX": 0.09,
+        "toY": 0.53,
+        "durationMs": 900,
+        "momentum": false
+      }
+    },
+    {
+      "tap": {
+        "id": "qa-overlay.button"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.title"
+        },
+        "timeoutMs": 10000
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "hidden",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "Return"
+        },
+        "timeoutMs": 15000
+      }
+    },
+    {
+      "await": {
+        "idle": true
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.4025,
+              "y": 0.586
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "PXGGridLayout-Info"
+              },
+              "timeoutMs": 10000
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.5005,
+              "y": 0.433
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "PXGGridLayout-Info"
+              },
+              "timeoutMs": 10000
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "text": "Preview image"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.4025,
+              "y": 0.586
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "PXGGridLayout-Info"
+              },
+              "timeoutMs": 10000
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.8345,
+              "y": 0.587
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "PXGGridLayout-Info"
+              },
+              "timeoutMs": 10000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.8035,
+              "y": 0.47
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "text": "Image 2 of 2"
+              },
+              "timeoutMs": 10000
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-swipe",
+            "args": {
+              "fromX": 0.25,
+              "fromY": 0.547,
+              "toX": 0.75,
+              "toY": 0.547,
+              "durationMs": 500,
+              "momentum": true
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "text": "Image 1 of 2"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-swipe",
+            "args": {
+              "fromX": 0.8,
+              "fromY": 0.547,
+              "toX": 0.2,
+              "toY": 0.547,
+              "durationMs": 500,
+              "momentum": true
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "text": "Image 2 of 2"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.095,
+              "y": 0.0965
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "qa-overlay.title"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "Return"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.1995,
+              "y": 0.4325
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "text": "Image 1 of 2"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.906,
+              "y": 0.0965
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "trash",
+                "role": "Button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.649,
+              "y": 0.106
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "text": "Image 1 of 1"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "qa-overlay.preview.more"
+              }
+            }
+          },
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.906,
+              "y": 0.0965
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "trash",
+                "role": "Button"
+              }
+            }
+          },
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.649,
+              "y": 0.106
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "Return"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "text": "Preview image"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.4025,
+              "y": 0.586
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "PXGGridLayout-Info"
+              },
+              "timeoutMs": 10000
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.5005,
+              "y": 0.433
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "PXGGridLayout-Info"
+              },
+              "timeoutMs": 10000
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "text": "Preview image"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "run-sequence",
+      "args": {
+        "steps": [
+          {
+            "tool": "gesture-tap",
+            "args": {
+              "x": 0.5425,
+              "y": 0.397
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "text": "Preview image"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "visible",
+              "selector": {
+                "identifier": "qa-overlay.title"
+              }
+            }
+          },
+          {
+            "tool": "await-ui-element",
+            "args": {
+              "condition": "hidden",
+              "selector": {
+                "identifier": "qa-overlay.button"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tap": {
+        "id": "qa-overlay.close"
+      }
+    },
+    {
+      "tool": "await-ui-element",
+      "args": {
+        "condition": "visible",
+        "selector": {
+          "identifier": "qa-overlay.button"
+        }
+      }
+    }
+  ]
+}

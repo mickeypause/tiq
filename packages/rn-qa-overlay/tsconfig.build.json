@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "plugin",
+    "outDir": "build",
+    "types": [
+      "bun"
+    ]
+  },
+  "include": [
+    "plugin/index.ts",
+    "plugin/config.ts"
+  ]
+}

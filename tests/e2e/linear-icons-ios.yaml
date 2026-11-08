@@ -1,0 +1,62 @@
+steps:
+- echo: Requires Linear sign-in to the internal workspace with Nitro Development and
+    a Done workflow state. Does not create an issue. Menu controls use native UIButton
+    identifiers; the final value check uses the AX tree.
+- launch: dev.rnqaoverlay.example
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      identifier: qa-overlay.button
+    timeoutMs: 10000
+- await:
+    idle: true
+- tap:
+    text: Report bug
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      identifier: qa-overlay.team
+    timeoutMs: 10000
+- await:
+    idle: true
+- tap:
+    id: qa-overlay.team
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      text: Sign out on this device
+    timeoutMs: 5000
+- await:
+    idle: true
+- tap:
+    text: Nitro Development
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      identifier: qa-overlay.team
+    timeoutMs: 10000
+- await:
+    idle: true
+- tap:
+    id: qa-overlay.status
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      text: Done
+    timeoutMs: 5000
+- await:
+    idle: true
+- tap:
+    text: Done
+- tool: await-ui-element
+  args:
+    condition: text
+    selector:
+      identifier: qa-overlay.status
+    expectedText: Done
+    timeoutMs: 5000

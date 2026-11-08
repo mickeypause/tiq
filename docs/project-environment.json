@@ -1,0 +1,17 @@
+{
+  "inspection_source": "argent-environment-inspector / gather-workspace-data",
+  "date": "2026-11-07",
+  "is_react_native": true,
+  "is_expo": true,
+  "is_native_ios": false,
+  "is_native_android": false,
+  "expo": "58.0.23",
+  "react_native": "0.88.1",
+  "package_manager": "bun@1.3.11",
+  "platforms": ["ios", "android"],
+  "metro_port": 8097,
+  "native_generation": "Expo prebuild; generated example/ios and example/android are ignored",
+  "build_commands": ["bun run ios", "bun run android"],
+  "checks": ["bun run check", "bun run verify:exclusion"],
+  "expo_go_supported": false
+}

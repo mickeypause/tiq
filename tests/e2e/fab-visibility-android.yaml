@@ -1,0 +1,31 @@
+steps:
+  - launch: dev.rnqaoverlay.example
+  - tap:
+      text: Report bug
+  - tool: button
+    args:
+      button: back
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.close
+      timeoutMs: 10000
+  - tool: await-ui-element
+    args:
+      condition: hidden
+      selector:
+        identifier: qa-overlay.button
+  - tap:
+      text: Close reporter
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.button
+      timeoutMs: 10000
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: Counter · 0

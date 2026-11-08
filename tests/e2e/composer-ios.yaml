@@ -1,0 +1,55 @@
+# Requires a configured Linear OAuth app and an already signed-in tester.
+# These flows stop before submission and do not create Linear issues.
+steps:
+  - launch: dev.rnqaoverlay.example
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.button
+  - await: { idle: true }
+  - tap:
+      text: Report bug
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.title
+  - await: { idle: true }
+  - tap:
+      id: qa-overlay.title
+  - tool: keyboard
+    args:
+      text: Checkout button does nothing
+  - tool: await-ui-element
+    args:
+      condition: text
+      selector:
+        identifier: qa-overlay.title
+      expectedText: Checkout button does nothing
+  - echo: "Close opens the native confirmation alert; Save draft retains the report."
+  - tap:
+      id: qa-overlay.close
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.save-draft
+  - await: { idle: true }
+  - tap:
+      id: qa-overlay.save-draft
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.button
+  - await: { idle: true }
+  - tap:
+      text: Report bug
+  - tool: await-ui-element
+    args:
+      condition: text
+      selector:
+        identifier: qa-overlay.title
+      expectedText: Checkout button does nothing
+  - await: { idle: true }

@@ -1,0 +1,29 @@
+{
+  "name": "qa-overlay-example",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "expo": "~58.0.23",
+    "expo-status-bar": "~58.0.4",
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "@mickeypause/tiq": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "~19.3.0",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "APP_ENV=preview expo start --dev-client --port 8097",
+    "prebuild": "APP_ENV=preview expo prebuild --clean",
+    "prebuild:production": "APP_ENV=production expo prebuild --clean",
+    "android": "APP_ENV=preview expo prebuild --clean --platform android && APP_ENV=preview expo run:android --variant release --no-bundler",
+    "ios": "APP_ENV=preview expo prebuild --clean --platform ios && APP_ENV=preview expo run:ios --configuration Release --no-bundler",
+    "ios:debug": "APP_ENV=preview expo prebuild --clean --platform ios && APP_ENV=preview expo run:ios --port 8097",
+    "android:debug": "APP_ENV=preview expo prebuild --clean --platform android && APP_ENV=preview expo run:android --port 8097",
+    "eas-build-post-install": "bun run --cwd .. build",
+    "lint": "oxlint App.tsx app.config.ts index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "private": true
+}

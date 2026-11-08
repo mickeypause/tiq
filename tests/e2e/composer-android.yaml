@@ -1,0 +1,54 @@
+# Requires a configured Linear OAuth app and an already signed-in tester.
+# Stops before submission; Close now presents the native Save draft/Discard alert.
+steps:
+- launch: dev.rnqaoverlay.example
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      identifier: qa-overlay.button
+    timeoutMs: 15000
+- await:
+    idle: true
+- tap:
+    id: qa-overlay.button
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      text: Issue title
+- await:
+    idle: true
+- tap:
+    id: qa-overlay.title
+- tool: keyboard
+  args:
+    text: Checkout button does nothing
+- tool: await-ui-element
+  args:
+    condition: text
+    selector:
+      text: Checkout button does nothing
+    expectedText: Checkout button does nothing
+- tap:
+    text: Close reporter
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      text: Save draft
+- tap:
+    text: Save draft
+- tool: await-ui-element
+  args:
+    condition: visible
+    selector:
+      text: Report bug
+- tap:
+    id: qa-overlay.button
+- tool: await-ui-element
+  args:
+    condition: text
+    selector:
+      text: Checkout button does nothing
+    expectedText: Checkout button does nothing

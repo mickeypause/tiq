@@ -1,0 +1,56 @@
+# Requires a configured Linear OAuth app and an already signed-in tester.
+# Prepare a saved draft with one image attached through Gallery before running.
+# Stops before submission and does not create Linear issues.
+steps:
+  - launch: dev.rnqaoverlay.example
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.button
+      timeoutMs: 15000
+  - await: { idle: true }
+  - tap:
+      text: Report bug
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.title
+  - await: { idle: true }
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: Preview image
+  - echo: "Preview image is AX-only: native label search and runner probe found no
+      matching view. Use its AX frame center on iPhone 18 Pro portrait."
+  - tap:
+      x: 0.1995
+      y: 0.4325
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        identifier: qa-overlay.preview.close
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: Image canvas
+  - await: { idle: true }
+  - echo: Done is AX-only in the runner; use its accessibility frame center on
+      iPhone 18 Pro portrait.
+  - tap:
+      x: 0.8685
+      y: 0.1145
+  - tool: await-ui-element
+    args:
+      condition: hidden
+      selector:
+        identifier: qa-overlay.preview.close
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: Preview image

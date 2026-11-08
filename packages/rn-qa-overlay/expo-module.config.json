@@ -1,0 +1,5 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": { "podspecPath": "RnQaOverlay.podspec", "swiftModuleName": "RnQaOverlay", "appDelegateSubscribers": ["QaOverlayAppDelegateSubscriber"] },
+  "android": { "modules": [] }
+}

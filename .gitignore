@@ -1,0 +1,24 @@
+node_modules/
+**/build/
+**/.expo/
+example/ios/
+example/android/
+example/.env.local
+.DS_Store
+*.log
+.argent/
+artifacts/
+ios-production/
+
+# Local credentials and signing material
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p8
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.tsbuildinfo
