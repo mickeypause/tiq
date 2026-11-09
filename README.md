@@ -1,5 +1,9 @@
 # Tiq
 
+See [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and
+[Releasing](RELEASING.md) for checks, private vulnerability reporting, and the
+verified draft release process.
+
 A native QA reporter for internal Expo builds. The library renders its own SwiftUI (iOS) and Jetpack Compose (Android) interface, without a React component, runtime JavaScript import, or provider in the host app. Expo Go is unsupported.
 
 Includes the floating entry button, native title/description composer, in-memory draft, attachment preview/removal, gallery, photo, camera video and public-API screen recording. Phase two adds on-device Linear OAuth PKCE, team/workflow selection, private media uploads and issue creation. Configure your OAuth application to enable reporting.
