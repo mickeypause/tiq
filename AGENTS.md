@@ -1,5 +1,12 @@
 # rn-qa-overlay
 
+Open-source workflows: `.github/workflows/ci.yml` runs the required `checks` job
+on PRs and main, including standalone package verification on macOS. Keep its job
+name stable because the main ruleset requires it. `CONTRIBUTING.md`, `SECURITY.md`,
+and `RELEASING.md` own contributor, disclosure, and release procedures. The manual
+release workflow runs only on main and creates verified drafts; preserve the
+private package guard until third-party redistribution permission is resolved.
+
 Use Bun. Run `bun run check` after TypeScript/plugin changes. Use `bun run verify:exclusion` after inclusion or permission changes.
 
 The reporter is native SwiftUI/Compose. The Expo example is the host, with no reporter runtime imports. Expo Go is unsupported. Phase two adds native Linear OAuth PKCE, secure token storage and API submission. Never bundle credentials or client secrets.
